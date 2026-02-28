@@ -1,0 +1,43 @@
+########################################
+## <summary>
+##	Execute dnscrypt in the dnscrypt domain.
+## </summary>
+## <param name="domain">
+## <summary>
+##	Domain allowed to transition.
+## </summary>
+## </param>
+#
+interface(`dnscrypt_domtrans',`
+	gen_require(`
+		type dnscrypt_t, dnscrypt_exec_t;
+	')
+
+	domtrans_pattern($1, dnscrypt_exec_t, dnscrypt_t)
+')
+
+
+########################################
+## <summary>
+##	Execute dnscrypt in the dnscrypt domain.
+## </summary>
+## <param name="domain">
+## <summary>
+##	Domain allowed to transition.
+## </summary>
+## </param>
+## <param name="role">
+##	<summary>
+##	Role allowed access.
+##	</summary>
+## </param>
+#
+interface(`dnscrypt_run',`
+	gen_require(`
+		type dnscrypt_t;
+		attribute_role dnscrypt_roles;
+	')
+
+	dnscrypt_domtrans($1)
+	roleattribute $2 dnscrypt_roles;
+')
