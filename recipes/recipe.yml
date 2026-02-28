@@ -1,0 +1,20 @@
+name: secureblue-iot-dnsserver
+description: "DNS server on secureblue IoT"
+
+base-image: ghcr.io/secureblue/iot-main-hardened
+
+image-version: latest
+
+cosign-version: none
+nushell-version: none
+
+platforms:
+  - linux/amd64
+  - linux/arm64
+
+modules:
+    - type: files
+      source: ghcr.io/blue-build/modules@sha256:23b9c9a2032ac653bf6a73a3b9372c12004211e004eea4269a8d3da9001c2301
+      files:
+        - source: system
+          destination: /
