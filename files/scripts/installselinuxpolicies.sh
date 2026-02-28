@@ -6,8 +6,6 @@
 
 set -euo pipefail
 
-dnf install -y --setopt=install_weak_deps=False policycoreutils-devel
-
 policy_modules=(dnscrypt)
 
 for module in "${policy_modules[@]}"; do
