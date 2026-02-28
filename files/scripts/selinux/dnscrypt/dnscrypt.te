@@ -6,6 +6,6 @@ roleattribute object_r dnscrypt_roles;
 type dnscrypt_t;
 type dnscrypt_exec_t;
 domain_type(dnscrypt_t, dnscrypt_exec_t)
-application_domain(dnscrypt_t, dnscrypt_exec_t)
+init_daemon_domain(dnscrypt_t, dnscrypt_exec_t)
 
 role dnscrypt_roles types dnscrypt_t;
