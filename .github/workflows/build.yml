@@ -59,7 +59,7 @@ jobs:
         env:
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
           PR_EVENT_NUMBER: ${{ github.event.number }}
-          RECIPE: ${{ inputs.recipe }}
+          RECIPE: ${{ matrix.recipe }}
         run: |
           IMAGE_NAME=$(yq -r '."name"' "./recipes/${RECIPE}")
           echo "IMAGE_NAME=${IMAGE_NAME}" >> "${GITHUB_OUTPUT}"
