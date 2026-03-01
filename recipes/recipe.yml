@@ -34,7 +34,6 @@ modules:
       scripts:
         - installselinuxpolicies.sh
         - swaptonewimagestring.sh
-        - setports.sh
         - setdnscryptproxysettings.sh
         - disableunusedservices.sh
         - allowcontaineruserns.sh
