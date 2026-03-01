@@ -24,4 +24,4 @@ corenet_udp_bind_generic_node(dnscrypt_t)
 corenet_tcp_bind_generic_node(dnscrypt_t)
 
 allow dnscrypt_t self:udp_socket create_socket_perms;
-allow dnscrypt_t self:tcp_socket {create_stream_socket_perms;
+allow dnscrypt_t self:tcp_socket create_stream_socket_perms;
