@@ -2,9 +2,6 @@
 
 set -euo pipefail
 
-firewall-cmd --permanent --add-service=https
-firewall-cmd --permanent --add-port=843/tcp
-
 systemctl disable --now unbound.socket
 systemctl mask --now unbound.socket
 systemctl disable --now unbound-control.socket
