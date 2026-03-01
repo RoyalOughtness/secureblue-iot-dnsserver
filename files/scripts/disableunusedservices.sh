@@ -34,3 +34,13 @@ systemctl disable --now clevis-luks-askpass.service
 systemctl mask --now clevis-luks-askpass.service
 systemctl disable --now clevis-luks-askpass.path
 systemctl mask --now clevis-luks-askpass.path
+systemctl disable --now systemd-ask-password-wall.service
+systemctl mask --now systemd-ask-password-wall.service
+systemctl disable --now systemd-ask-password-wall.path
+systemctl mask --now systemd-ask-password-wall.path
+systemctl disable --now systemd-ask-password-console.service
+systemctl mask --now systemd-ask-password-console.service
+systemctl disable --now systemd-ask-password-console.path
+systemctl mask --now systemd-ask-password-console.path
+systemctl disable --now rc-local.service
+systemctl mask --now rc-local.service
