@@ -4,7 +4,7 @@ A work-in-progress project with the goal of providing a secureblue-iot based boo
 
 ## Features
  - DNSSEC enabled
- - Containerized Pi-hole 
+ - Containerized Adguard Home
  - Inbound DoT and DoH support
  - dnscrypt-proxy for upstream resolver connections
  - Strict systemd sandboxing
